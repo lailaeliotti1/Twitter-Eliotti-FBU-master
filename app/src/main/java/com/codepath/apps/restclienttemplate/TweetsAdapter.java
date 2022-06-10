@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -60,6 +61,8 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         TextView tvScreenName;
         TextView tvBody;
         ImageView ivTweetImage;
+        TextView tvFavoriteCount;
+        ImageButton ibFavorite;
 
          public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -67,6 +70,8 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             tvBody = itemView.findViewById(R.id.tvBody);
             ivTweetImage = itemView.findViewById(R.id.ivTweetImage);
+            ibFavorite = itemView.findViewById(R.id.ibFavorite);
+            tvFavoriteCount = itemView.findViewById(R.id.tvFavoriteCount);
 
 
         }
@@ -83,6 +88,24 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
                  ivTweetImage.setVisibility(View.GONE);
              }
 
+            ibFavorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //tell twitter i want to favorite this
+                    //change the drawable to btn_star_big_on
+                    //increment the text inside rtvFavorite Coutn
+
+                    //elif already fav
+                    //tell twitter i wanr ro unfav
+                    //change drawable back to off
+                    // decreement text inside tvFavoriteCount
+                }
+
+            });
+
         }
+            }
+         }
+
     }
 }

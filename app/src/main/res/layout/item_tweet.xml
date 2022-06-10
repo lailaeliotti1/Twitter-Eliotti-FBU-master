@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/RelativeLayout"
@@ -9,11 +9,15 @@
 
     <ImageView
         android:id="@+id/ivTweetImage"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvBody"
         android:layout_marginTop="13dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:scaleType="centerInside"
+        tools:srcCompat="@tools:sample/avatars"
+        app:layout_constraintStart_toEndOf="@id/ivProfileImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBody"/>
 
     <ImageView
         android:id="@+id/ivProfileImage"
@@ -45,4 +49,25 @@
         android:layout_toEndOf="@+id/ivProfileImage"
         android:text="TextView" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/tvFavoriteCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivTweetImage"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/ibFavorite" />
+
+    <ImageButton
+        android:id="@+id/ibFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivTweetImage"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toEndOf="@+id/tvFavoriteCount"
+        app:srcCompat="@android:drawable/btn_star_big_off"
+        app:layout_constraintTop_toBottomOf= "@+id/ivTweetImage"
+        app:layout_constraintStart_toEndOf="@+id/ivProfileImage"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
