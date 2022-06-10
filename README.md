@@ -47,7 +47,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='[http://i.imgur.com/link/to/your/gif/file.gif](https://github.com/lailaeliotti1/Twitter-Eliotti-FBU-master/raw/d2d79e95f026c8f37892253d936511b9d7479830/zJtEFeV9.gif)' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/lailaeliotti1/Twitter-Eliotti-FBU-master/raw/master/zJtEFeV9.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Kap](https://getkap.co/).
 
