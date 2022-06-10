@@ -68,6 +68,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         ImageView ivTweetImage;
         TextView tvFavoriteCount;
         ImageButton ibFavorite;
+        TextView tvCreatedAt;
 
          public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -77,12 +78,14 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             ivTweetImage = itemView.findViewById(R.id.ivTweetImage);
             ibFavorite = itemView.findViewById(R.id.ibFavorite);
             tvFavoriteCount = itemView.findViewById(R.id.tvFavoriteCount);
+            tvCreatedAt = itemView.findViewById(R.id.tvCreatedAt);
 
 
         }
 
         public void bind(Tweet tweet) {
              tvBody.setText(tweet.body);
+             tvCreatedAt.setText(tweet.getRelativeTimeAgo(tweet.createdAt));
              tvScreenName.setText(tweet.user.screenName);
              tvFavoriteCount.setText(String.valueOf(tweet.favoriteCount));
              Glide.with(context).load(tweet.user.publicImageUrl).into(ivProfileImage);
