@@ -49,7 +49,6 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/lailaeliotti1/Twitter-Eliotti-FBU-master/raw/master/zJtEFeV9.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
